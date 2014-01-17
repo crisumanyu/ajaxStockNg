@@ -70,7 +70,7 @@ var control_producto_list = function(path) {
             var tipoproducto = objeto('tipoproducto', path);
             var tipoproductoView = vista(tipoproducto, path);
 
-            cabecera = '<button id="full-width" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>" + "<h3 id="myModalLabel">Elección</h3>';
+            cabecera = '<button id="full-width" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>' + '<h3 id="myModalLabel">Elección</h3>';
             pie = '<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Cerrar</button>';
             listado = tipoproductoView.getEmptyList();
             loadForm('#modal02', cabecera, listado, pie, true);
@@ -148,7 +148,7 @@ var control_producto_list = function(path) {
             return o;
         };
         var jsonObj = [];
-        jsonObj = $(prefijo_div + '#productoForm').serializeObject();
+        jsonObj = $(prefijo_div + '#formulario').serializeObject();
         jsonfile = {json: JSON.stringify(jsonObj)};
         cabecera = "<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">×</button>" + "<h3 id=\"myModalLabel\">Respuesta del servidor</h3>";
         pie = "<button class=\"btn btn-primary\" data-dismiss=\"modal\" aria-hidden=\"true\">Cerrar</button>";

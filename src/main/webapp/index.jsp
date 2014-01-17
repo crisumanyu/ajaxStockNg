@@ -13,7 +13,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Ajax Stock</title>
+        <title>Ajax Stock uniDAO</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -29,10 +29,10 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
-        
-                <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
         <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
-        
+
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -48,7 +48,7 @@
                         <span class="icon-bar"></span> 
                         <span class="icon-bar"></span>
                     </a> 
-                    <a class="brand" href="jsp">Ajax Stock</a>                   
+                    <a class="brand" href="jsp">Ajax Stock uniDAO</a>                   
                     <div class="nav-collapse collapse">
                         <%if (user != null) {%>
                         <jsp:include page="jsp/menuSuperior.jsp" />   

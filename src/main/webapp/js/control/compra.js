@@ -37,7 +37,7 @@ var control_compra_list = function(path) {
         var objConsulta = objeto(strObjetoForeign, path);
         var consultaView = vista(objConsulta, path);
 
-        cabecera = '<button id="full-width" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h3 id="myModalLabel">Elección</h3>';
+        cabecera = '<button id="full-width" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>' + '<h3 id="myModalLabel">Elección</h3>';
         pie = '<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Cerrar</button>';
         listado = consultaView.getEmptyList();
         loadForm(strPlace, cabecera, listado, pie, true);

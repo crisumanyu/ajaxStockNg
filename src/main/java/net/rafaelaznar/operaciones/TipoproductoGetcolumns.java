@@ -10,7 +10,8 @@ import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import net.rafaelaznar.dao.TipoproductoDao_Mysql;
+import net.rafaelaznar.dao.TipoproductoDao;
+
 import net.rafaelaznar.helper.Conexion;
 
 /**
@@ -23,7 +24,7 @@ public class TipoproductoGetcolumns implements GenericOperation {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         ArrayList<String> alColumns = null;
         try {
-            TipoproductoDao_Mysql oTipoproductoDAO = new TipoproductoDao_Mysql(Conexion.getConection());
+            TipoproductoDao oTipoproductoDAO = new TipoproductoDao(Conexion.getConection());
             alColumns = oTipoproductoDAO.getColumnsNames();
             String data = new Gson().toJson(alColumns);
             data = "{\"data\":" + data + "}";

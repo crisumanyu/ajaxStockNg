@@ -4,12 +4,12 @@
     Author     : rafa
 --%>
 <%@page import="net.rafaelaznar.helper.Conexion"%>
-<%@page import="net.rafaelaznar.dao.TipoproductoDao_Mysql"%>
+<%@page import="net.rafaelaznar.dao.TipoproductoDao"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Iterator"%>
 <%
-    TipoproductoDao_Mysql oTipoproductoDao_Mysql = new TipoproductoDao_Mysql(Conexion.getConection());
-    ArrayList<String> alColumnsNames = (ArrayList<String>) oTipoproductoDao_Mysql.getColumnsNames();
+    TipoproductoDao oTipoproductoDao = new TipoproductoDao(Conexion.getConection());
+    ArrayList<String> alColumnsNames = (ArrayList<String>) oTipoproductoDao.getColumnsNames();
     Iterator<String> oIterador = alColumnsNames.listIterator();
     String strNombreMantenimiento = "tipoproducto";
 %>

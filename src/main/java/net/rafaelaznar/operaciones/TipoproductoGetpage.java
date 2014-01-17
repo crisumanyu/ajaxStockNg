@@ -11,9 +11,9 @@ import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import net.rafaelaznar.dao.TipoproductoDao_Mysql;
 import net.rafaelaznar.helper.Conexion;
 import net.rafaelaznar.bean.TipoproductoBean;
+import net.rafaelaznar.dao.TipoproductoDao;
 import net.rafaelaznar.helper.FilterBean;
 
 /**
@@ -70,7 +70,7 @@ public class TipoproductoGetpage implements GenericOperation {
                     hmOrder.put(request.getParameter("order"), request.getParameter("ordervalue"));                  
                 } else             hmOrder=null;
             } else             hmOrder=null;
-            TipoproductoDao_Mysql oTipoproductoDAO = new TipoproductoDao_Mysql(Conexion.getConection());
+            TipoproductoDao oTipoproductoDAO = new TipoproductoDao(Conexion.getConection());
             List<TipoproductoBean> oTipoproductos = oTipoproductoDAO.getPage( rpp, page, alFilter,hmOrder );
             data = new Gson().toJson(oTipoproductos);
             data = "{\"list\":" + data + "}";

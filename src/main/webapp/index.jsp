@@ -116,38 +116,9 @@
         <script src="js/control/compra.js" charset="UTF-8"></script>
 
         <script>
-            /* Inicialización en español para la extensión 'UI date picker' para jQuery. */
-            /* Traducido por Vester (xvester [en] gmail [punto] com). */
-            jQuery(function($) {
-                $.datepicker.regional['es'] = {
-                    closeText: 'Cerrar',
-                    buttonImage: 'img/calendar.png',
-                    prevText: '<Ant',
-                    nextText: 'Sig>',
-                    currentText: 'Hoy',
-                    monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-                    monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
-                    dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-                    dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
-                    dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
-                    weekHeader: 'Sm',
-                    dateFormat: 'dd/mm/yy',
-                    firstDay: 1,
-                    isRTL: false,
-                    showMonthAfterYear: false,
-                    yearSuffix: ''};
-                $.datepicker.setDefaults($.datepicker.regional['es']);
-            });
 
-            //para solucionar el bug de la autollamada recursiva 
-            //muy dificil de encontrar y depurar
-            //dos modales a la vez se pasan el foco de una a la otra
-            //https://github.com/twbs/bootstrap/issues/4781
-            //https://github.com/makeusabrew/bootbox/issues/60
-            $(document).on('show', '.modal', function() {
-                $(document).off('focusin.modal');
-            });
             $(document).ready(function() {
+                inicializacion();
                 $('#lnkCliente').unbind('click');
                 $('#lnkCliente').click(function() {
                     var cliente = objeto('cliente', '<%=request.getContextPath()%>');

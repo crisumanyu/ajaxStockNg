@@ -48,12 +48,12 @@ var control_cliente_list = function(path) {
         if (action == "edit") {
             view.doFillForm(id);
         } else {
-            $(prefijo_div + '#id').val('0').attr("disabled", true);
-            //$(prefijo_div + '#nombre').focus();
+            $(prefijo_div + '#id').val('0').attr("disabled", true);            
         }
         $(prefijo_div + '#submitForm').unbind('click');
         $(prefijo_div + '#submitForm').click(function() {
-            enviarDatosUpdateForm(view, id);
+            //validaciones
+            enviarDatosUpdateForm(view,prefijo_div);
             return false;
         });
     }
@@ -79,40 +79,6 @@ var control_cliente_list = function(path) {
                 "<h3 id=\"myModalLabel\">Detalle de " + view.getObject().getName() + "</h3>";
         pie = "<button class=\"btn btn-primary\" data-dismiss=\"modal\" aria-hidden=\"true\">Cerrar</button>";
         loadForm(place, cabecera, view.getObjectTable(id), pie, true);
-    }
-
-    function enviarDatosUpdateForm(view, id) {
-        $.fn.serializeObject = function()
-        {
-            // http://jsfiddle.net/davidhong/gP9bh/
-            var o = {};
-            var a = this.serializeArray();
-            $.each(a, function() {
-                if (o[this.name] !== undefined) {
-                    if (!o[this.name].push) {
-                        o[this.name] = [o[this.name]];
-                    }
-                    o[this.name].push(this.value || '');
-                } else {
-                    o[this.name] = encodeURIComponent(this.value) || '';
-                }
-            });
-            return o;
-        };
-        var jsonObj = [];
-        jsonObj = $(prefijo_div + '#formulario').serializeObject();
-        jsonfile = {json: JSON.stringify(jsonObj)};
-        cabecera = "<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">×</button>" + "<h3 id=\"myModalLabel\">Respuesta del servidor</h3>";
-        pie = "<button class=\"btn btn-primary\" data-dismiss=\"modal\" aria-hidden=\"true\">Cerrar</button>";
-        resultado = view.getObject().saveOne(jsonfile);
-        if (resultado["status"] = "200") {
-            mensaje = 'valores actualizados correctamente para el cliente con id=' + resultado["message"];
-            loadForm('#modal02', cabecera, "Código: " + resultado["status"] + "<br />" + mensaje + "<br />" + view.getObjectTable(resultado["message"]), pie, true);
-        } else {
-            mensaje = 'el servidor ha retornado el mensaje de error=' + resultado["message"];
-            loadForm('#modal02', cabecera, "Código: " + resultado["status"] + "<br />" + mensaje + "<br />" + view.getObjectTable(resultado["message"]), pie, true);
-        }
-
     }
 
     function cargaCompras(id) {

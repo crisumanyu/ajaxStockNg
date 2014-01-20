@@ -180,6 +180,9 @@ var vista = function(objeto, ContextPath) {
                                     add_tabla = '<td>' + data[key] + '</td>';
                                 contador++;
                             }
+                            if (contador == 0) {
+                                add_tabla = '<td>' + value[valor] + ' #error</td>';
+                            }
                             tabla += add_tabla;
                         });
                     } else {

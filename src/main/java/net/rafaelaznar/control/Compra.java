@@ -5,6 +5,7 @@
 package net.rafaelaznar.control;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -92,7 +93,7 @@ public class Compra {
 
     @RequestMapping({"/compra/getprettycolumns.json"})
     public ModelAndView getPrettyColumns() throws UnsupportedEncodingException, ServletException {
-        try {
+        try {            
             String data = "{\"data\": [\"id\", \"cliente\", \"producto\", \"cantidad\", \"fecha\", \"factura\"]}";
             return new ModelAndView("messageAjax", "contenido", data);
         } catch (Exception e) {
@@ -142,7 +143,7 @@ public class Compra {
     public ModelAndView getRemove(HttpServletRequest request) throws UnsupportedEncodingException, ServletException, Exception {
         try {
             CompraBean oCompra = new CompraBean();
-            Gson gson = new Gson();
+            Gson gson = new GsonBuilder().setDateFormat("dd/MM/yyyy").create();
             String jason = request.getParameter("json");
             jason = EncodingUtil.decodeURIComponent(jason);
             oCompra = gson.fromJson(jason, oCompra.getClass());

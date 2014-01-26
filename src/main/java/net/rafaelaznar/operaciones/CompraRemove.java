@@ -24,7 +24,7 @@ public class CompraRemove implements GenericOperation {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         try {
-            CompraDao oCompraDAO = new CompraDao(Conexion.getConection());
+            CompraDao oCompraDAO = new CompraDao();
             CompraBean oCompra = new CompraBean();                                           
             oCompra.setId(Integer.parseInt(request.getParameter("id")));            
             Map<String, String> data = new HashMap<>();

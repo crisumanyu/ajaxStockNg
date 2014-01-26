@@ -13,8 +13,8 @@ import net.rafaelaznar.helper.Conexion;
  */
 public class ClienteDao extends GenericDaoImplementation<ClienteBean> {
   
-    public ClienteDao(Conexion.Tipo_conexion tipoConexion) throws Exception {
-        super(tipoConexion,"cliente");
+    public ClienteDao() throws Exception {
+        super(Conexion.getConection(),"cliente");
     }
     
 }

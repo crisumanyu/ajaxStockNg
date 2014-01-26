@@ -25,7 +25,7 @@ public class ClienteRemove implements GenericOperation {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         try {
-            ClienteDao oClienteDAO = new ClienteDao(Conexion.getConection());
+            ClienteDao oClienteDAO = new ClienteDao();
             ClienteBean oCliente = new ClienteBean();                                           
             oCliente.setId(Integer.parseInt(request.getParameter("id")));            
             Map<String, String> data = new HashMap<>();

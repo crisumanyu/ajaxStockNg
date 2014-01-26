@@ -25,7 +25,7 @@ public class ProductoRemove implements GenericOperation {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         try {
-            ProductoDao oProductoDAO = new ProductoDao(Conexion.getConection());
+            ProductoDao oProductoDAO = new ProductoDao();
             ProductoBean oProducto = new ProductoBean();                                           
             oProducto.setId(Integer.parseInt(request.getParameter("id")));            
             Map<String, String> data = new HashMap<>();            

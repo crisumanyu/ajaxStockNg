@@ -28,7 +28,7 @@ public class TipoproductoGet implements GenericOperation {
             if (request.getParameter("id") == null) {
                 data = "{\"error\":\"id is mandatory\"}";
             } else {
-                TipoproductoDao oTipoproductoDAO = new TipoproductoDao(Conexion.getConection());
+                TipoproductoDao oTipoproductoDAO = new TipoproductoDao();
                 TipoproductoBean oTipoproducto = new TipoproductoBean();
                 oTipoproducto.setId(Integer.parseInt(request.getParameter("id")));
                 oTipoproductoDAO.get(oTipoproducto);

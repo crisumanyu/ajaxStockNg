@@ -28,7 +28,7 @@ public class CompraGet implements GenericOperation {
             if (request.getParameter("id") == null) {
                 data = "{\"error\":\"id is mandatory\"}";
             } else {
-                CompraDao oCompraDAO = new CompraDao(Conexion.getConection());
+                CompraDao oCompraDAO = new CompraDao();
                 CompraBean oCompra = new CompraBean();
                 oCompra.setId(Integer.parseInt(request.getParameter("id")));
                 oCompraDAO.get(oCompra);                                

@@ -49,7 +49,7 @@ public class ClienteGetregisters implements GenericOperation {
                     }
                 }
             }       
-            ClienteDao oClienteDAO = new ClienteDao(Conexion.getConection());
+            ClienteDao oClienteDAO = new ClienteDao();
             int pages = oClienteDAO.getCount(alFilter);
             data = "{\"data\":\"" + Integer.toString(pages) + "\"}";
             return data;

@@ -48,7 +48,7 @@ public class TipoproductoGetregisters implements GenericOperation {
                     }
                 }
             }
-            TipoproductoDao oTipoproductoDAO = new TipoproductoDao(Conexion.getConection());
+            TipoproductoDao oTipoproductoDAO = new TipoproductoDao();
             int pages = oTipoproductoDAO.getCount(alFilter);
             data = "{\"data\":\"" + Integer.toString(pages) + "\"}";
             return data;

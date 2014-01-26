@@ -26,7 +26,7 @@ public class ProductoSave implements GenericOperation {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         try {
-            ProductoDao oProductoDAO = new ProductoDao(Conexion.getConection());
+            ProductoDao oProductoDAO = new ProductoDao();
             ProductoBean oProducto = new ProductoBean();
             Gson gson = new Gson();
             String jason = request.getParameter("json");

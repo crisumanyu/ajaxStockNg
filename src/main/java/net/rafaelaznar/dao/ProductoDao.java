@@ -15,8 +15,8 @@ import net.rafaelaznar.helper.Conexion;
 
 public class ProductoDao extends GenericDaoImplementation<ProductoBean> {
   
-    public ProductoDao(Conexion.Tipo_conexion tipoConexion) throws Exception {
-        super(tipoConexion,"producto");
+    public ProductoDao() throws Exception {
+        super(Conexion.getConection(),"producto");
     }
     
 }

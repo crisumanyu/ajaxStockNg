@@ -26,7 +26,7 @@ public class CompraSave implements GenericOperation {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         try {
-            CompraDao oCompraDAO = new CompraDao(Conexion.getConection());
+            CompraDao oCompraDAO = new CompraDao();
             CompraBean oCompra = new CompraBean();            
             Gson gson=  new GsonBuilder().setDateFormat("dd/MM/yyyy").create();
             String jason = request.getParameter("json");

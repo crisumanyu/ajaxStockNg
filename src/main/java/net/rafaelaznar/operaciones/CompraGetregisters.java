@@ -48,7 +48,7 @@ public class CompraGetregisters implements GenericOperation {
                     }
                 }
             }
-            CompraDao oCompraDAO = new CompraDao(Conexion.getConection());
+            CompraDao oCompraDAO = new CompraDao();
             int pages = oCompraDAO.getCount(alFilter);
             data = "{\"data\":\"" + Integer.toString(pages) + "\"}";
             return data;

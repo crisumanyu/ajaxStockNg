@@ -26,7 +26,7 @@ public class ClienteSave implements GenericOperation {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         try {
-            ClienteDao oClienteDAO = new ClienteDao(Conexion.getConection());
+            ClienteDao oClienteDAO = new ClienteDao();
             ClienteBean oCliente = new ClienteBean();
             Gson gson = new Gson();
             String jason = request.getParameter("json");

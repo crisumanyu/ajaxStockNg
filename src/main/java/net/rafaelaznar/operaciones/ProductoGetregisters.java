@@ -49,7 +49,7 @@ public class ProductoGetregisters implements GenericOperation {
                     }
                 }
             }         
-            ProductoDao oProductoDAO = new ProductoDao(Conexion.getConection());
+            ProductoDao oProductoDAO = new ProductoDao();
             int pages = oProductoDAO.getCount(alFilter);
             data = "{\"data\":\"" + Integer.toString(pages) + "\"}";
             return data;

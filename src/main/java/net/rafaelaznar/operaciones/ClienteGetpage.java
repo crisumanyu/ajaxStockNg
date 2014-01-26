@@ -71,7 +71,7 @@ public class ClienteGetpage implements GenericOperation {
                     hmOrder.put(request.getParameter("order"), request.getParameter("ordervalue"));                  
                 } else             hmOrder=null;
             } else             hmOrder=null;
-            ClienteDao oClienteDAO = new ClienteDao(Conexion.getConection());
+            ClienteDao oClienteDAO = new ClienteDao();
             List<ClienteBean> oClientes = oClienteDAO.getPage( rpp, page, alFilter,hmOrder );
             data = new Gson().toJson(oClientes);
             data = "{\"list\":" + data + "}";

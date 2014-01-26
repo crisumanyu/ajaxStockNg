@@ -4,10 +4,8 @@
     Author     : rafa
 --%>
 
-<form id="loginForm" action="jsp" class="form-horizontal" method="post">
+<form id="loginForm" action="login02.html" class="form-horizontal" method="post">
     <h1>Formulario de entrada al sistema</h1>
-    <input type="hidden" name="ob" value="usuario" />
-    <input type="hidden" name="op" value="login02" />
     <div class="control-group">
         <label class="control-label" for="inputLogin">Usuario:</label>
         <div class="controls">

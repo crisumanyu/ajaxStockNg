@@ -1,6 +1,6 @@
 <div class="hero-unit">
-    <h1>Bienvenidos a ajax stock uniDAO</h1>
-    <h3>Versión (v.01) de 16/1/2014</h3>
+    <h1>Bienvenidos a ajax stock uniDAO Spring</h1>
+    <h3>Versión (v.01) de 27/1/2014</h3>
     <h5>Desarrollo de aplicaciones web. CPIFP Ausiàs March. Curso 2013-2014.</h5>    
 </div>
 <div class="row-fluid">
@@ -46,6 +46,7 @@
             <li>Cliente desarrollado sobre Bootstrap responsivo</li>
             <li>Acceso a datos (base de datos MySQL) mediante clases de negocio y DAO</li>
             <li>UNI-DAO tiene la característica especial de que tiene una clase DAO genérica mediante el uso de Reflection</li>
+            <li>Spring se utiliza para proporcionar soporte a las URL REST (híbrido) y para conocer el concepto de inyección de dependencias</li>
             <li>Mantenimientos paginados</li>
             <li>Ajax Stock soporta Relaciones 1:M</li>
             <li>Ajax Stock soporta Relaciones M:M</li>

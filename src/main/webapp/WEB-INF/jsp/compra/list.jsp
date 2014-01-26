@@ -4,14 +4,14 @@
     Author     : rafa
 --%>
 <%@page import="net.rafaelaznar.helper.Conexion"%>
-<%@page import="net.rafaelaznar.dao.TipoproductoDao"%>
+<%@page import="net.rafaelaznar.dao.CompraDao"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Iterator"%>
 <%
-    TipoproductoDao oTipoproductoDao = new TipoproductoDao(Conexion.getConection());
-    ArrayList<String> alColumnsNames = (ArrayList<String>) oTipoproductoDao.getColumnsNames();
+    CompraDao oCompraDao = new CompraDao();
+    ArrayList<String> alColumnsNames = (ArrayList<String>) oCompraDao.getColumnsNames();
     Iterator<String> oIterador = alColumnsNames.listIterator();
-    String strNombreMantenimiento = "tipoproducto";
+    String strNombreMantenimiento = "compra";
 %>
 <div id="<%=strNombreMantenimiento%>_list">
     <div class="span12">
@@ -81,13 +81,14 @@
         <div id="datos"></div>
         <div id="datos2"></div>
     </div>
+
     <!-- Modales -->
     <div id="modal01" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header"></div>
         <div class="modal-body"></div>
         <div class="modal-footer"></div>
     </div>
-    <div id="modal02" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div id="modal02" class="modal container hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header"></div>
         <div class="modal-body"></div>
         <div class="modal-footer"></div>

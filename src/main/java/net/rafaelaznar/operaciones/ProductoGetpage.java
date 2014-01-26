@@ -75,7 +75,7 @@ public class ProductoGetpage implements GenericOperation {
             } else {
                 hmOrder = null;
             }
-            ProductoDao oProductoDAO = new ProductoDao(Conexion.getConection());
+            ProductoDao oProductoDAO = new ProductoDao();
             List<ProductoBean> oProductos = oProductoDAO.getPage(rpp, page, alFilter, hmOrder);
             data = new Gson().toJson(oProductos);
             data = "{\"list\":" + data + "}";

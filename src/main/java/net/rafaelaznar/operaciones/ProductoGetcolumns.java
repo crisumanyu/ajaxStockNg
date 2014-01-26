@@ -24,7 +24,7 @@ public class ProductoGetcolumns implements GenericOperation {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         ArrayList<String> alColumns = null;
         try {
-            ProductoDao oProductoDAO = new ProductoDao(Conexion.getConection());
+            ProductoDao oProductoDAO = new ProductoDao();
             alColumns = oProductoDAO.getColumnsNames();
             String data = new Gson().toJson(alColumns);
             data = "{\"data\":" + data + "}";

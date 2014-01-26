@@ -10,7 +10,6 @@ import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import net.rafaelaznar.helper.Conexion;
 import net.rafaelaznar.helper.EncodingUtil;
 import net.rafaelaznar.bean.TipoproductoBean;
 import net.rafaelaznar.dao.TipoproductoDao;
@@ -25,7 +24,7 @@ public class TipoproductoSave implements GenericOperation {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         try {
-            TipoproductoDao oTipoproductoDAO = new TipoproductoDao(Conexion.getConection());
+            TipoproductoDao oTipoproductoDAO = new TipoproductoDao();
             TipoproductoBean oTipoproducto = new TipoproductoBean();
             Gson gson = new Gson();
             String jason = request.getParameter("json");

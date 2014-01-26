@@ -65,7 +65,7 @@ public class ClienteGetpages implements GenericOperation {
             } else {
                 hmOrder = null;
             }
-            ClienteDao oClienteDAO = new ClienteDao(Conexion.getConection());
+            ClienteDao oClienteDAO = new ClienteDao();
             int pages = oClienteDAO.getPages(rpp, alFilter, hmOrder);
             data = "{\"data\":\"" + Integer.toString(pages) + "\"}";
             return data;

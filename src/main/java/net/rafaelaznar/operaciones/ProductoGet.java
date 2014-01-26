@@ -28,7 +28,7 @@ public class ProductoGet implements GenericOperation {
             if (request.getParameter("id") == null) {
                 data = "{\"error\":\"id is mandatory\"}";
             } else {
-                ProductoDao oProductoDAO = new ProductoDao(Conexion.getConection());
+                ProductoDao oProductoDAO = new ProductoDao();
                 ProductoBean oProducto = new ProductoBean();
                 oProducto.setId(Integer.parseInt(request.getParameter("id")));
                 oProductoDAO.get(oProducto);

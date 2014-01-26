@@ -65,7 +65,7 @@ public class ProductoGetpages implements GenericOperation {
             } else {
                 hmOrder = null;
             }
-            ProductoDao oProductoDAO = new ProductoDao(Conexion.getConection());
+            ProductoDao oProductoDAO = new ProductoDao();
             int pages = oProductoDAO.getPages(rpp, alFilter, hmOrder);
             data = "{\"data\":\"" + Integer.toString(pages) + "\"}";
             return data;

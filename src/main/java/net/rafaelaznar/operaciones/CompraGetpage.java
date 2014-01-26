@@ -79,7 +79,7 @@ public class CompraGetpage implements GenericOperation {
             } else {
                 hmOrder = null;
             }
-            CompraDao oCompraDAO = new CompraDao(Conexion.getConection());
+            CompraDao oCompraDAO = new CompraDao();
             List<CompraBean> oCompras = oCompraDAO.getPage(rpp, page, alFilter, hmOrder);
 
             GsonBuilder gsonBuilder = new GsonBuilder();

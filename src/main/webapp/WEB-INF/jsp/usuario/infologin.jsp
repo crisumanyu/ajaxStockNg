@@ -9,8 +9,8 @@
  <p class="navbar-text pull-right">           
 <%if (user != null) {%>
 Estas logueado como <%=user.getNombre()%>&nbsp;&nbsp;&nbsp;&nbsp;
-<a class="navbar-link" href="jsp?ob=usuario&op=logout">(Salir del sistema)</a>
+<a class="navbar-link" href="<%=request.getContextPath()%>/usuario/logout.html">(Salir del sistema)</a>
 <%} else {%>
-<a class="navbar-link" href="jsp?op=login01&ob=usuario">Login</a>
+<a class="navbar-link" href="<%=request.getContextPath()%>/usuario/login01.html">Login</a>
 <%}%>
  </p>

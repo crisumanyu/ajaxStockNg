@@ -65,7 +65,7 @@ public class CompraGetpages implements GenericOperation {
             } else {
                 hmOrder = null;
             }
-            CompraDao oCompraDAO = new CompraDao(Conexion.getConection());
+            CompraDao oCompraDAO = new CompraDao();
             int pages = oCompraDAO.getPages(rpp, alFilter, hmOrder);
             data = "{\"data\":\"" + Integer.toString(pages) + "\"}";
             return data;

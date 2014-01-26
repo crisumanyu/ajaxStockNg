@@ -13,27 +13,27 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Ajax Stock uniDAO</title>
+        <title>Ajax Stock uniDAO Spring</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/bootstrap.min.css">
         <style>
             body {
                 padding-top: 60px;
                 padding-bottom: 40px;
             }
         </style>
-        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/main.css">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="<%=request.getContextPath()%>/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="<%=request.getContextPath()%>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
 
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
         <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
 
-    </head>
+    </head>    
     <body>
         <!--[if lt IE 7]>
         <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
@@ -48,12 +48,12 @@
                         <span class="icon-bar"></span> 
                         <span class="icon-bar"></span>
                     </a> 
-                    <a class="brand" href="jsp">Ajax Stock uniDAO</a>                   
+                    <a class="brand" href="<%=request.getContextPath()%>/index.html">Ajax Stock uniDAO Spring</a>                   
                     <div class="nav-collapse collapse">
                         <%if (user != null) {%>
-                        <jsp:include page="jsp/menuSuperior.jsp" />   
+                        <jsp:include page="menuSuperior.jsp" />   
                         <% } %>
-                        <jsp:include page="jsp/usuario/infologin.jsp" />                        
+                        <jsp:include page="usuario/infologin.jsp" />                        
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                     if (user != null) {
                         out.print("<div class=\"span2\">");
                 %>
-                <jsp:include page="jsp/menuLateral.jsp" />
+                <jsp:include page="menuLateral.jsp" />
                 <%
                         out.print("</div>");
                     }
@@ -92,28 +92,28 @@
 
         <!-- carga de javascript -->
 
-        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap.min.js"></script>
 
-        <script src="js/vendor/bootstrap-transition.js"></script>
-        <script src="js/vendor/bootstrap-alert.js"></script>
-        <script src="js/vendor/bootstrap-modal.js"></script>
-        <script src="js/vendor/bootstrap-dropdown.js"></script>
-        <script src="js/vendor/bootstrap-scrollspy.js"></script>
-        <script src="js/vendor/bootstrap-tab.js"></script>
-        <script src="js/vendor/bootstrap-tooltip.js"></script>
-        <script src="js/vendor/bootstrap-popover.js"></script>
-        <script src="js/vendor/bootstrap-button.js"></script>
-        <script src="js/vendor/bootstrap-collapse.js"></script>
-        <script src="js/vendor/bootstrap-carousel.js"></script>
-        <script src="js/vendor/bootstrap-typeahead.js"></script>    
+        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-transition.js"></script>
+        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-alert.js"></script>
+        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-modal.js"></script>
+        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-dropdown.js"></script>
+        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-scrollspy.js"></script>
+        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-tab.js"></script>
+        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-tooltip.js"></script>
+        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-popover.js"></script>
+        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-button.js"></script>
+        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-collapse.js"></script>
+        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-carousel.js"></script>
+        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-typeahead.js"></script>    
 
-        <script src="js/util.js" charset="UTF-8"></script>
-        <script src="js/main.js" charset="UTF-8"></script>
+        <script src="<%=request.getContextPath()%>/js/util.js" charset="UTF-8"></script>
+        <script src="<%=request.getContextPath()%>/js/main.js" charset="UTF-8"></script>
 
-        <script src="js/control/cliente.js" charset="UTF-8"></script>
-        <script src="js/control/producto.js" charset="UTF-8"></script>
-        <script src="js/control/tipoproducto.js" charset="UTF-8"></script>
-        <script src="js/control/compra.js" charset="UTF-8"></script>
+        <script src="<%=request.getContextPath()%>/js/control/cliente.js" charset="UTF-8"></script>
+        <script src="<%=request.getContextPath()%>/js/control/producto.js" charset="UTF-8"></script>
+        <script src="<%=request.getContextPath()%>/js/control/tipoproducto.js" charset="UTF-8"></script>
+        <script src="<%=request.getContextPath()%>/js/control/compra.js" charset="UTF-8"></script>
 
         <script>
 

@@ -70,7 +70,7 @@ public class TipoproductoGetpage implements GenericOperation {
                     hmOrder.put(request.getParameter("order"), request.getParameter("ordervalue"));                  
                 } else             hmOrder=null;
             } else             hmOrder=null;
-            TipoproductoDao oTipoproductoDAO = new TipoproductoDao(Conexion.getConection());
+            TipoproductoDao oTipoproductoDAO = new TipoproductoDao();
             List<TipoproductoBean> oTipoproductos = oTipoproductoDAO.getPage( rpp, page, alFilter,hmOrder );
             data = new Gson().toJson(oTipoproductos);
             data = "{\"list\":" + data + "}";

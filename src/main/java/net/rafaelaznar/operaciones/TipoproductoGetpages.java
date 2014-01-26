@@ -64,7 +64,7 @@ public class TipoproductoGetpages implements GenericOperation {
             } else {
                 hmOrder = null;
             }
-            TipoproductoDao oTipoproductoDAO = new TipoproductoDao(Conexion.getConection());
+            TipoproductoDao oTipoproductoDAO = new TipoproductoDao();
             int pages = oTipoproductoDAO.getPages(rpp, alFilter, hmOrder);
             data = "{\"data\":\"" + Integer.toString(pages) + "\"}";
             return data;

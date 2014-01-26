@@ -17,7 +17,6 @@ import net.rafaelaznar.bean.ClienteBean;
 
 import com.google.gson.Gson;
 import net.rafaelaznar.dao.ClienteDao;
-import net.rafaelaznar.helper.Conexion;
 
 public class ClienteGet implements GenericOperation {
 
@@ -28,7 +27,7 @@ public class ClienteGet implements GenericOperation {
             if (request.getParameter("id") == null) {
                 data = "{\"error\":\"id is mandatory\"}";
             } else {
-                ClienteDao oClienteDAO = new ClienteDao(Conexion.getConection());
+                ClienteDao oClienteDAO = new ClienteDao();
                 ClienteBean oCliente = new ClienteBean();
                 oCliente.setId(Integer.parseInt(request.getParameter("id")));
                 oClienteDAO.get(oCliente);

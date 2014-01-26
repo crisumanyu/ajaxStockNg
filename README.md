@@ -1,5 +1,5 @@
-Ajax-Stock-UniDao
-=================
+Ajax-Stock-UniDao-Spring
+========================
 
 Ajax Stock UniDao. uniDao stands for only one generic DAO class without JPA nor Hibernate.
 
@@ -26,6 +26,7 @@ La he liberado con licencia GNU Free Documentation License 1.3
 * Cliente desarrollado sobre Bootstrap responsivo
 * Acceso a datos (base de datos MySQL) mediante clases de negocio y DAO
 * UNI-DAO tiene la característica especial de que tiene una clase DAO genérica mediante el uso de Reflection
+* Spring se utiliza para proporcionar soporte a las URL REST (híbrido) y para conocer el concepto de inyección de dependencias
 * Mantenimientos paginados
 * Ajax Stock soporta Relaciones 1:M
 * Ajax Stock soporta Relaciones M:M

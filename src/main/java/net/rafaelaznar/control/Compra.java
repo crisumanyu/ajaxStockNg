@@ -69,7 +69,10 @@ public class Compra {
         String data;
         try {
             List<CompraBean> oCompras = oCompraDAO.getPage(rpp, page, OrderFilter.getFilter(request), OrderFilter.getOrder(request));
-            data = new Gson().toJson(oCompras);
+            GsonBuilder gsonBuilder = new GsonBuilder();
+            gsonBuilder.setDateFormat("dd/MM/yyyy");
+            Gson gson = gsonBuilder.create();
+            data = gson.toJson(oCompras);
             data = "{\"list\":" + data + "}";
             return new ModelAndView("messageAjax", "contenido", data);
 
@@ -93,7 +96,7 @@ public class Compra {
 
     @RequestMapping({"/compra/getprettycolumns.json"})
     public ModelAndView getPrettyColumns() throws UnsupportedEncodingException, ServletException {
-        try {            
+        try {
             String data = "{\"data\": [\"id\", \"cliente\", \"producto\", \"cantidad\", \"fecha\", \"factura\"]}";
             return new ModelAndView("messageAjax", "contenido", data);
         } catch (Exception e) {

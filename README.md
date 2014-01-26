@@ -1,5 +1,5 @@
-Ajax-Stock-UniDao
-=================
+Ajax-Stock-UniDao-Spring
+========================
 
 Ajax Stock UniDao. uniDao stands for only one generic DAO class without JPA nor Hibernate.
 

@@ -1,8 +1,3 @@
-<%@page import="net.rafaelaznar.bean.UsuarioBean"%>
-<%UsuarioBean user = (UsuarioBean) request.getSession().getAttribute("usuarioBean");%>
-
-
-
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -34,117 +29,49 @@
         <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
 
     </head>    
-    <body>
-        <!--[if lt IE 7]>
-        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-        <![endif]-->
 
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container-fluid">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
-                        <span class="icon-bar"></span> 
-                        <span class="icon-bar"></span> 
-                        <span class="icon-bar"></span>
-                    </a> 
-                    <a class="brand" href="<%=request.getContextPath()%>/index.html">Ajax Stock uniDAO Spring</a>                   
-                    <div class="nav-collapse collapse">
-                        <%if (user != null) {%>
-                        <jsp:include page="menuSuperior.jsp" />   
-                        <% } %>
-                        <jsp:include page="usuario/infologin.jsp" />                        
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <%
-                    if (user != null) {
-                        out.print("<div class=\"span2\">");
-                %>
-                <jsp:include page="menuLateral.jsp" />
-                <%
-                        out.print("</div>");
-                    }
-                %>
-                <%
-                    if (user != null) {
-                        out.print("<div class=\"span10\">");
-                        out.print("<div id=\"indexContenido\"></div>");
-                    } else {
-                        out.print("<div class=\"span12\">");
-                    }
-                %>
-                <div id="indexContenidoJsp">
-                    <jsp:include page='<%=(String) request.getAttribute("contenido")%>' />                
-                </div>
-                <%
-                    out.print("</div>");
-                %>    
-                <div class="row-fluid">
-                    <div class="span12"><hr><footer><p>&copy; Rafael Aznar (2013)</p></footer></div>   
-                </div>
-            </div>
-        </div>                    
 
-        <!-- carga de javascript -->
 
-        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap.min.js"></script>
 
-        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-transition.js"></script>
-        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-alert.js"></script>
-        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-modal.js"></script>
-        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-dropdown.js"></script>
-        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-scrollspy.js"></script>
-        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-tab.js"></script>
-        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-tooltip.js"></script>
-        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-popover.js"></script>
-        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-button.js"></script>
-        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-collapse.js"></script>
-        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-carousel.js"></script>
-        <script src="<%=request.getContextPath()%>/js/vendor/bootstrap-typeahead.js"></script>    
 
-        <script src="<%=request.getContextPath()%>/js/util.js" charset="UTF-8"></script>
-        <script src="<%=request.getContextPath()%>/js/main.js" charset="UTF-8"></script>
 
-        <script src="<%=request.getContextPath()%>/js/control/cliente.js" charset="UTF-8"></script>
-        <script src="<%=request.getContextPath()%>/js/control/producto.js" charset="UTF-8"></script>
-        <script src="<%=request.getContextPath()%>/js/control/tipoproducto.js" charset="UTF-8"></script>
-        <script src="<%=request.getContextPath()%>/js/control/compra.js" charset="UTF-8"></script>
 
-        <script>
 
-            $(document).ready(function() {
-                inicializacion();
-                $('#lnkCliente').unbind('click');
-                $('#lnkCliente').click(function() {
-                    var cliente = objeto('cliente', '<%=request.getContextPath()%>');
-                    var clienteView = vista(cliente, '<%=request.getContextPath()%>');
 
-                    $('#indexContenidoJsp').empty();
-                    $('#indexContenido').empty().append(clienteView.getEmptyList());
 
-                    var clienteControl = control_cliente_list('<%=request.getContextPath()%>');
-                    clienteControl.inicia(clienteView, 1, null, null, 10, null, null, null, null);
-                    return false;
-                });
-                $('#lnkProducto').unbind('click');
-                $('#lnkProducto').click(function() {
-                    var producto = objeto('producto', '<%=request.getContextPath()%>');
-                    var productoView = vista(producto, '<%=request.getContextPath()%>');
 
-                    $('#indexContenidoJsp').empty();
-                    $('#indexContenido').empty().append(productoView.getEmptyList());
 
-                    var productoControl = control_producto_list('<%=request.getContextPath()%>');
-                    productoControl.inicia(productoView, 1, null, null, 10, null, null, null, null);
-                    return false;
-                });
-            });
 
-        </script>
-    </body>
+
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+  <link rel="stylesheet" href="css/app.css"/>
+  
+</head>
+<body>
+  <ul class="menu">
+    <li><a href="#/view1">view1</a></li>
+    <li><a href="#/view2">view2</a></li>
+  </ul>     
+
+  <div ng-view></div>
+
+  <div>Angular seed app: v<span app-version></span></div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  -->
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-route.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
 </html>

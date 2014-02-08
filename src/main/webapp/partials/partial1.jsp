@@ -1,0 +1,109 @@
+
+
+<div class="row-fluid">
+    <div class="span7">       
+        <h2>Productos</h2>
+        <div id="order"></div>
+        <div id="filter"></div>            
+        <div id="registers">Mostrando {{clientes.length}} registros</div>
+        <div id="pagination" ng-bind-html="botoneraPaginas"></div>
+        
+    </div>
+    <div class="span5">
+        <div class="text-right">
+            <legend>Filtro</legend> 
+            <form class="navbar-form pull-right" action="Controller" method="post" id="empresaForm">
+                <fieldset>                                                                     
+                    <span>
+                        <select id="selectFilter" name="filter" width="80" style="width: 100px">
+
+                            <option value="ooo">Columnas</option>
+
+                        </select>
+                    </span>
+                    <span>
+                        <select id="selectFilteroperator" name="filteroperator" width="80" style="width: 100px">
+                            <option>like</option>
+                            <option>notlike</option>
+                            <option>equals</option>
+                            <option>notequalto</option>
+                            <option>less</option>
+                            <option>lessorequal</option>
+                            <option>greater</option>
+                            <option>greaterorequal</option> 
+                        </select>
+                        <input id="inputFiltervalue" name="filtervalue" type="text" size="20" maxlength="50" value=""  width="100" style="width: 90px"/>
+                    </span>
+                    <span>
+                        <input type="submit" class="btn" id="btnFiltrar" name="btnFiltrar" value="Filtrar ooo" />
+                    </span>
+                </fieldset>
+            </form>
+        </div>
+        <div class="text-right">
+            <legend>Registros por página</legend> 
+            <form class="navbar-form pull-right" action="Controller" method="post" id="nrrpForm" >
+                <fieldset>                                               
+                    <span>
+                        <select  id="rpp" name="nrpp" value="select" style="width: 80px">                        
+                            <option>5</option>
+                            <option selected>10</option>
+                            <option>20</option>
+                            <option>50</option>
+                            <option>100</option>
+                        </select>  
+                    </span>                   
+                </fieldset>
+            </form>                
+        </div> 
+        <button class="btn" id="crear">Crear Producto</button>
+    </div>
+</div>
+<br>
+<div id="datos">
+    <table class="table table-striped table-condensed">
+        <thead>                
+            <tr>                
+                <th ng-repeat="name in prettyFieldNames" style="min-width: 80px;">{{name}}</th>                   
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="cli in clientes">
+                <td>{{cli.id}}</td>
+                <td>{{cli.nombre}}</td>
+                <td>{{cli.ape1}}</td>
+                <td>{{cli.ape2}}</td>
+                <td>{{cli.email}}</td>
+                <td>
+                    <div class="btn-toolbar">
+                        <div class="btn-group">
+                            <a class="btn btn-mini action02" ng-click="view(cli.id)" href="#"><i class="icon-zoom-in"></i></a>
+                            <a class="btn btn-mini action03" ng-click="edit(cli.id)" href="#"><i class="icon-pencil"></i></a>
+                            <a class="btn btn-mini action04" ng-click="delete(cli.id)" href="#"><i class="icon-remove"></i></a>
+                        </div> 
+                    </div>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>            
+</div>
+<div id="datos2"></div>
+
+
+
+
+
+
+
+<!-- Modales -->
+<div id="modal01" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header"></div>
+    <div class="modal-body"></div>
+    <div class="modal-footer"></div>
+</div>
+<div id="modal02" class="modal container hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header"></div>
+    <div class="modal-body"></div>
+    <div class="modal-footer"></div>
+</div>

@@ -1,5 +1,14 @@
 'use strict';
-
+function getNrppBar(page_number, total_pages, neighborhood) {
+    var link = '#/cliente/';
+    var vector = "<div class=\"nrpp\"><ul>";
+    vector += ("<li><a class=\"nrpp\" id=\"" + (page_number - 1) + "\" href=\"" + link + (page_number - 1) + "\">prev</a></li>");
+ 
+    http://localhost:8081/AjaxStockUniDaoSpring/index.jsp#/cliente/4/nrpp
+    
+    vector += "</ul></div>";
+    return vector;
+}
 function getPaginationBar(page_number, total_pages, neighborhood) {
     page_number = parseInt(page_number);
     total_pages = parseInt(total_pages);
@@ -54,7 +63,7 @@ modulo01.controller('MyCtrl1', function($scope, $routeParams, serverService) {
         }
     ];
 
-    $scope.nrpp = 10;
+    //$scope.nrpp = 10;
 
 
 //    $http({
@@ -68,6 +77,7 @@ modulo01.controller('MyCtrl1', function($scope, $routeParams, serverService) {
 
 
     $scope.numPagina = $routeParams.numpage;
+    $scope.nrpp = $routeParams.numrpp;
 
     //$scope.nrpp = 5;
 
@@ -100,13 +110,7 @@ modulo01.controller('MyCtrl1', function($scope, $routeParams, serverService) {
     }, true)
 
     $scope.$on('myApp.eventoClienteInicia', function() {
-        $scope.clientes = serverService.getPage('cliente', $scope.numPagina, null, null, $scope.nrpp, null, null, null, null, null, null).then(function(datos3) {
-            $scope.clientes = datos3['list'];
-        });
-        $scope.pages = serverService.getPages('cliente', $scope.nrpp, null, null, null, null, null, null).then(function(datos5) {
-            $scope.pages = datos5['data'];
-            $scope.botoneraPaginas = getPaginationBar($scope.numPagina, $scope.pages, 2);
-        });
+
 
     })
 

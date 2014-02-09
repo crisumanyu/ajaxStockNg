@@ -15,6 +15,9 @@
             <form class="navbar-form pull-right" action="Controller" method="post" id="empresaForm">
                 <fieldset>                                                                     
                     <span>
+                        
+                        
+                       
                         <select ng-model="selectedFilterFieldName"  ng-options="item for item in fieldNames"  id="filtro" name="filtro" style="width: 100px">                                                
                
 

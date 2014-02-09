@@ -5,7 +5,7 @@
         <h2>Productos</h2>
         <div id="order"></div>
         <div id="filter"></div>            
-        <div id="registers">Mostrando {{clientes.length}} registros</div>
+        <div id="registers">Mostrando {{clientes.length}} registros {{numPagina}}</div>
         <div id="pagination" ng-bind-html="botoneraPaginas"></div>
         
     </div>

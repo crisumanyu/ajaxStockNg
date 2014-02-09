@@ -4,7 +4,7 @@ function getPaginationBar(page_number, total_pages, neighborhood) {
     page_number = parseInt(page_number);
     total_pages = parseInt(total_pages);
     neighborhood = parseInt(neighborhood);
-    var link = '#';
+    var link = '#/cliente/';
     var vector = "<div class=\"pagination\"><ul>";
     if (page_number > 1)
         vector += ("<li><a class=\"pagination_link\" id=\"" + (page_number - 1) + "\" href=\"" + link + (page_number - 1) + "\">prev</a></li>");
@@ -37,26 +37,32 @@ function getPaginationBar(page_number, total_pages, neighborhood) {
 
 var modulo01 = angular.module('myApp.controllers', []);
 
-modulo01.controller('MyCtrl1', function($scope, serverService) {
+modulo01.controller('MyCtrl1', function($scope, $routeParams, serverService) {
 
 
+    $scope.numPagina = $routeParams.numpage;
+    $scope.numRegsPorPag = 5;
 
+//    $scope.cliente = serverService.get('cliente', 2).then(function(datos) {
+//        $scope.cliente = datos;
+//    });
 
-    $scope.cliente = serverService.get('cliente', 2).then(function(datos) {
-        $scope.cliente = datos;
-    });
-    $scope.clientes = serverService.getPage('cliente', 2, null, null, 5, null, null, null, null, null, null).then(function(datos3) {
-        $scope.clientes = datos3['list'];
-    });
     $scope.prettyFieldNames = serverService.getPrettyFieldNames('cliente').then(function(datos4) {
         datos4['data'].push('acciones');
         $scope.prettyFieldNames = datos4['data'];
     });
-    $scope.pages = serverService.getPages('cliente', 5, null, null, null, null, null, null).then(function(datos5) {
-        $scope.pages = datos5['data'];
+
+    $scope.clientes = serverService.getPage('cliente', $scope.numPagina, null, null, $scope.numRegsPorPag, null, null, null, null, null, null).then(function(datos3) {
+        $scope.clientes = datos3['list'];
+
     });
 
-    $scope.botoneraPaginas = getPaginationBar(2, 22, 2);
+    $scope.pages = serverService.getPages('cliente', $scope.numRegsPorPag, null, null, null, null, null, null).then(function(datos5) {
+        $scope.pages = datos5['data'];
+        $scope.botoneraPaginas = getPaginationBar($scope.numPagina, $scope.pages, 2);
+    });
+
+
 
 });
 

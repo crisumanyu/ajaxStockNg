@@ -29,13 +29,13 @@
         </style>
         <link rel="stylesheet" href="<%=request.getContextPath()%>/css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="<%=request.getContextPath()%>/css/main.css">
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="<%=request.getContextPath()%>/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+   <!--      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+   <!--     <script>window.jQuery || document.write('<script src="<%=request.getContextPath()%>/js/vendor/jquery-1.10.2.min.js"><\/script>')</script> -->
         <script src="<%=request.getContextPath()%>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
 
-        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
-        <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+   <!--        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+        <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script> -->
 
     </head>    
 
@@ -45,7 +45,7 @@
                 
                 <div class="span12">  
                     <ul class="menu">
-                        <li><a href="#cliente/1">cliente</a></li>
+                        <li><a href="#cliente">cliente</a></li>
                         <li><a href="#view2">view2</a></li>
                     </ul> 
                 </div>

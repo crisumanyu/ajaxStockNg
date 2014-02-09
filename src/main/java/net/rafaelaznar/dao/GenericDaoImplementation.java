@@ -70,13 +70,13 @@ public class GenericDaoImplementation<TIPO_OBJETO> implements GenericDao<TIPO_OB
         try {
             oMysql.conexion(enumTipoConexion);
             arrId = oMysql.getPage(strTabla, intRegsPerPag, intPage, hmFilter, hmOrder);
+            oMysql.desconexion();
             Iterator<Integer> iterador = arrId.listIterator();
             while (iterador.hasNext()) {
                 Object oBean = Class.forName(tipo.getName()).newInstance();
                 metodo_setId.invoke(oBean, iterador.next());
                 arrCliente.add(this.get((TIPO_OBJETO) oBean));
-            }
-            oMysql.desconexion();
+            }            
             return arrCliente;
         } catch (Exception e) {
             throw new Exception("GenericDao.getPage: Error: " + e.getMessage());

@@ -37,7 +37,7 @@ function getPaginationBar(page_number, total_pages, neighborhood) {
 
 var modulo01 = angular.module('myApp.controllers', []);
 
-modulo01.controller('MyCtrl1', function($scope, $routeParams, serverService) {
+modulo01.controller('MyCtrl1', function($scope, serverService) {
 
     $scope.nrpps = [{
             id: 5,
@@ -55,7 +55,7 @@ modulo01.controller('MyCtrl1', function($scope, $routeParams, serverService) {
     ];
 
     $scope.nrpp = 10;
-
+    $scope.numPagina = 1;
 
 //    $http({
 //        method: 'GET',
@@ -67,7 +67,6 @@ modulo01.controller('MyCtrl1', function($scope, $routeParams, serverService) {
 
 
 
-    $scope.numPagina = $routeParams.numpage;
 
     //$scope.nrpp = 5;
 

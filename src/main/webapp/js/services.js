@@ -40,6 +40,11 @@ angular.module('myApp.services', [])
                         return result.data;
                     });
                 },
+                getFieldNames: function(objeto) {
+                    return $http.get('/' + appName + '/' + objeto + '/getcolumns.json').then(function(result) {
+                        return result.data;
+                    });
+                },                
                 getPrettyFieldNames: function(objeto) {
                     return $http.get('/' + appName + '/' + objeto + '/getprettycolumns.json').then(function(result) {
                         return result.data;

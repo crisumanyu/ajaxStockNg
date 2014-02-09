@@ -4,8 +4,8 @@
     <div class="span7">       
         <h2>Productos</h2>
         <div id="order"></div>
-        <div id="filter"></div>            
-        <div id="registers">Mostrando {{clientes.length}} registros {{numPagina}}</div>
+        <div id="filter"></div>  
+        <div id="registers">Mostrando {{clientes.length}} registros ({{nrpp}} por página)</div>
         <div id="pagination" ng-bind-html="botoneraPaginas"></div>
         
     </div>
@@ -15,9 +15,10 @@
             <form class="navbar-form pull-right" action="Controller" method="post" id="empresaForm">
                 <fieldset>                                                                     
                     <span>
-                        <select id="selectFilter" name="filter" width="80" style="width: 100px">
+                        <select ng-model="selectedFilterFieldName"  ng-options="item for item in fieldNames"  id="filtro" name="filtro" style="width: 100px">                                                
+               
 
-                            <option value="ooo">Columnas</option>
+                    
 
                         </select>
                     </span>
@@ -45,14 +46,10 @@
             <form class="navbar-form pull-right" action="Controller" method="post" id="nrrpForm" >
                 <fieldset>                                               
                     <span>
-                        <select  id="rpp" name="nrpp" value="select" style="width: 80px">                        
-                            <option>5</option>
-                            <option selected>10</option>
-                            <option>20</option>
-                            <option>50</option>
-                            <option>100</option>
+                        <select ng-model="nrpp"  ng-options="item.id as item.desc for item in nrpps"  id="nrpp" name="nrpp" style="width: 200px">                                                
                         </select>  
-                    </span>                   
+                    </span>  
+           
                 </fieldset>
             </form>                
         </div> 

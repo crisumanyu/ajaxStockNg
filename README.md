@@ -1,4 +1,4 @@
 ajaxStockNg
 ===========
 
-ajaxStockNg
+ajaxStockNg (ojo, inestable)

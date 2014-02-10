@@ -47,7 +47,7 @@
                 
                 <div class="span12">  
                     <ul class="menu">
-                        <li><a href="#cliente/1">cliente</a></li>
+                        <li><a href="#cliente/1/5">cliente</a></li>
                         <li><a href="#view2">view2</a></li>
                     </ul> 
                 </div>

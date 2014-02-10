@@ -1,6 +1,6 @@
 'use strict';
 
-var appName='AjaxStockUniDaoSpring';
+var appName='AjaxStockNg';
 
 
 
@@ -14,7 +14,7 @@ angular.module('myApp', [
      'ngSanitize' //http://stackoverflow.com/questions/9381926/insert-html-into-view-using-angularjs
 ]).
         config(['$routeProvider', function($routeProvider) {
-                $routeProvider.when('/cliente/:numpage', {templateUrl: 'partials/cliente.jsp', controller: 'MyCtrl1'});
+                $routeProvider.when('/cliente/:numpage/:numrpp', {templateUrl: 'partials/cliente.jsp', controller: 'MyCtrl1'});
                 $routeProvider.when('/view2', {templateUrl: 'partials/partial2.jsp', controller: 'MyCtrl2'});
                 $routeProvider.otherwise({redirectTo: '/view1'});
             }]);

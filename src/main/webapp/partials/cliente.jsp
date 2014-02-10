@@ -46,6 +46,8 @@
         </div>
         <div class="text-right">
             <legend>Registros por página</legend> 
+            <div id="pagination" ng-bind-html="botoneraNrpp"></div>
+            <!--
             <form class="navbar-form pull-right" action="Controller" method="post" id="nrrpForm" >
                 <fieldset>                                               
                     <span>
@@ -54,7 +56,8 @@
                     </span>  
            
                 </fieldset>
-            </form>                
+            </form> 
+            -->
         </div> 
         <button class="btn" id="crear">Crear Producto</button>
     </div>

@@ -98,12 +98,16 @@ modulo01.controller('MyCtrl1', function($scope, serverService) {
         $scope.$broadcast('myApp.eventoClienteInicia');
     }, true)
 
+    $scope.$watch('numPagina', function() {
+        $scope.$broadcast('myApp.eventoClienteInicia');
+    }, true)
+
     $scope.$on('myApp.eventoClienteInicia', function() {
         $scope.clientes = serverService.getPage('cliente', $scope.numPagina, null, null, $scope.nrpp, null, null, null, null, null, null).then(function(datos3) {
             $scope.clientes = datos3['list'];
         });
-        $scope.pages = serverService.getPages('cliente', $scope.nrpp, null, null, null, null, null, null).then(function(datos5) {
-            $scope.pages = datos5['data'];
+        $scope.pages = serverService.getPages('cliente', $scope.nrpp, null, null, null, null, null, null).then(function(datos8) {
+            $scope.pages = datos8['data'];
             $scope.botoneraPaginas = getPaginationBar($scope.numPagina, $scope.pages, 2);
         });
 

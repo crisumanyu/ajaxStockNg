@@ -1,6 +1,6 @@
 'use strict';
 
-var appName='AjaxStockUniDaoSpring';
+var appName='AjaxStockNg';
 
 
 

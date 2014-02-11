@@ -15,6 +15,7 @@ public class ClienteDao extends GenericDaoImplementation<ClienteBean> {
   
     public ClienteDao() throws Exception {
         super(Conexion.getConection(),"cliente");
+        oMysql.conexion(enumTipoConexion);
     }
     
 }

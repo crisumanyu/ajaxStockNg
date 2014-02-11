@@ -57,11 +57,11 @@ angular.module('myApp.services', [])
                         return result.data;
                     });
                 },
-                getPaginationBar: function(page_number, total_pages, neighborhood, nrpp) {
+                getPaginationBar: function(objeto, page_number, total_pages, neighborhood, nrpp) {
                     page_number = parseInt(page_number);
                     total_pages = parseInt(total_pages);
                     neighborhood = parseInt(neighborhood);
-                    var link = '#/cliente/';
+                    var link = '#/' + objeto + '/';
                     var vector = "<div class=\"pagination\"><ul>";
                     if (page_number > 1)
                         vector += ("<li><a class=\"pagination_link\" id=\"" + (page_number - 1) + "\" href=\"" + link + (page_number - 1) + "/" + nrpp + "\">prev</a></li>");
@@ -87,8 +87,8 @@ angular.module('myApp.services', [])
                     vector += "</ul></div>";
                     return vector;
                 },
-                getNrppBar: function(page_number, nrpp) {
-                    var link = '#/cliente/';
+                getNrppBar: function(objeto, page_number, nrpp) {
+                    var link = '#/' + objeto + '/';
                     var vector = "<div class=\"pagination\"><ul>";
                     if (nrpp == 5)
                         vector += "<li class=\"active\" >";

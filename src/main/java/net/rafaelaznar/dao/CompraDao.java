@@ -15,6 +15,7 @@ public class CompraDao extends GenericDaoImplementation<CompraBean> {
   
     public CompraDao() throws Exception {
         super(Conexion.getConection(),"compra");
+        oMysql.conexion(enumTipoConexion);
     }
     
 }

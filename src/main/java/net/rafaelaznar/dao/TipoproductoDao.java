@@ -15,6 +15,7 @@ public class TipoproductoDao extends GenericDaoImplementation<TipoproductoBean> 
   
     public TipoproductoDao() throws Exception {
         super(Conexion.getConection(),"tipoproducto");
+        oMysql.conexion(enumTipoConexion);
     }
     
 }

@@ -47,7 +47,8 @@
                 
                 <div class="span12">  
                     <ul class="menu">
-                        <li><a href="#cliente/1/5">cliente</a></li>
+                        <li><a href="#clientes/1/10">clientes</a></li>
+                        <li><a href="#productos/1/10">productos</a></li>
                         <li><a href="#view2">view2</a></li>
                     </ul> 
                 </div>
@@ -73,7 +74,10 @@
         <script src="lib/angular/angular-sanitize.min.js"></script>
         <script src="js/app.js"></script>
         <script src="js/services.js"></script>
-        <script src="js/controllers.js"></script>
+        
+        <script src="js/clienteControllers.js"></script>
+        <script src="js/productoControllers.js"></script>
+        
         <script src="js/filters.js"></script>
         <script src="js/directives.js"></script>
         <script src="<%=request.getContextPath()%>/js/vendor/bootstrap.min.js"></script>

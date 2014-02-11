@@ -5,7 +5,7 @@
         <h2>Productos</h2>
         <div id="order"></div>
         <div id="filter"></div>  
-        <div id="registers">Mostrando {{clientes.length}} registros ({{nrpp}} por página)</div>
+        <div id="registers">Mostrando {{productos.length}} registros ({{nrpp}} por página)</div>
         <div id="pagination" ng-bind-html="botoneraPaginas"></div>
         
     </div>
@@ -14,15 +14,8 @@
             <legend>Filtro</legend> 
             <form class="navbar-form pull-right" action="Controller" method="post" id="empresaForm">
                 <fieldset>                                                                     
-                    <span>
-                        
-                        
-                       
-                        <select ng-model="selectedFilterFieldName"  ng-options="item for item in fieldNames"  id="filtro" name="filtro" style="width: 100px">                                                
-               
-
-                    
-
+                    <span>                                                                     
+                        <select ng-model="selectedFilterFieldName"  ng-options="item for item in fieldNames"  id="filtro" name="filtro" style="width: 100px">                                                       
                         </select>
                     </span>
                     <span>
@@ -71,18 +64,18 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="cli in clientes">
+            <tr ng-repeat="cli in productos">
                 <td>{{cli.id}}</td>
-                <td>{{cli.nombre}}</td>
-                <td>{{cli.ape1}}</td>
-                <td>{{cli.ape2}}</td>
-                <td>{{cli.email}}</td>
+                <td>{{cli.codigo}}</td>
+                <td>{{cli.descripcion}}</td>
+                <td>{{cli.precio}}</td>
+                <td>{{cli.id_tipoproducto}}</td>
                 <td>
                     <div class="btn-toolbar">
                         <div class="btn-group">
-                            <a class="btn btn-mini action02" ng-click="view(cli.id)" href="#"><i class="icon-zoom-in"></i></a>
-                            <a class="btn btn-mini action03" ng-click="edit(cli.id)" href="#"><i class="icon-pencil"></i></a>
-                            <a class="btn btn-mini action04" ng-click="delete(cli.id)" href="#"><i class="icon-remove"></i></a>
+                            <a class="btn btn-mini action02" href="#/producto/view/{{cli.id}}"><i class="icon-zoom-in"></i></a>
+                            <a class="btn btn-mini action03" href="#/producto/edit/{{cli.id}}"><i class="icon-pencil"></i></a>
+                            <a class="btn btn-mini action04" href="#/producto/delete/{{cli.id}}"><i class="icon-remove"></i></a>
                         </div> 
                     </div>
 

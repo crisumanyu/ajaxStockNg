@@ -14,9 +14,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>id</td><td>{{usu.id}}</td></tr>
-                <tr><td>nombre</td><td>{{usu.nombre}}</td>
-                <tr><td>primer apellido</td><td>{{usu.email}}</td>      
+                <tr><td>id</td><td>{{cli.id}}</td></tr>
+                <tr><td>nombre</td><td>{{cli.nombre}}</td>
+                <tr><td>email</td><td>{{cli.email}}</td>
+                <tr><td>login</td><td>{{cli.login}}</td>   
+                <tr><td>password</td><td>{{cli.password}}</td>   
+                <tr><td>tipo de usuario</td><td>{{cli.id_tipousuario}}</td>
             </tbody>
         </table>            
     </div>

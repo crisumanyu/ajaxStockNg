@@ -2,7 +2,7 @@
 
 <div class="row-fluid">
     <div class="span7">       
-        <h2>usuarios</h2>
+        <h2>cliarios</h2>
         <div id="order"></div>
         <div id="filter"></div>  
         <div id="registers">Mostrando {{usuarios.length}} registros ({{nrpp}} por página)</div>
@@ -67,9 +67,10 @@
             <tr ng-repeat="cli in usuarios">
                 <td>{{cli.id}}</td>
                 <td>{{cli.nombre}}</td>
-                <td>{{cli.ape1}}</td>
-                <td>{{cli.ape2}}</td>
+                <td>{{cli.login}}</td>
+                <td>{{cli.password}}</td>
                 <td>{{cli.email}}</td>
+                <td>{{cli.id_tipousuario}}</td>
                 <td>
                     <div class="btn-toolbar">
                         <div class="btn-group">

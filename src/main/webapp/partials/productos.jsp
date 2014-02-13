@@ -66,9 +66,9 @@
         <tbody>
             <tr ng-repeat="cli in productos">
                 <td>{{cli.id}}</td>
-                <td>{{cli.codigo}}</td>
-                <td>{{cli.descripcion}}</td>
+                <td>{{cli.nombre}}</td>
                 <td>{{cli.precio}}</td>
+                <td>{{cli.stock}}</td>
                 <td>{{cli.id_tipoproducto}}</td>
                 <td>
                     <div class="btn-toolbar">

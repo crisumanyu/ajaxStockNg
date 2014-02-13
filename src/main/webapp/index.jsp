@@ -98,7 +98,7 @@
         <script src="<%=request.getContextPath()%>/js/util.js" charset="UTF-8"></script>
         <script src="<%=request.getContextPath()%>/js/main.js" charset="UTF-8"></script>
 
-        <script src="<%=request.getContextPath()%>/js/control/Usuario.js" charset="UTF-8"></script>
+        <script src="<%=request.getContextPath()%>/js/control/usuario.js" charset="UTF-8"></script>
         <script src="<%=request.getContextPath()%>/js/control/producto.js" charset="UTF-8"></script>
         <script src="<%=request.getContextPath()%>/js/control/tipoproducto.js" charset="UTF-8"></script>
         <script src="<%=request.getContextPath()%>/js/control/compra.js" charset="UTF-8"></script>

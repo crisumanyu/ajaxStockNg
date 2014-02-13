@@ -4,7 +4,7 @@
     Author     : rafa
 --%>
 <form class="form-horizontal" action="#" id="formulario" name="formulario">
-    <h2>Cliente</h2>
+    <h2>Usuario</h2>
     <div class="control-group">
         <label class="control-label" for="inputId">Id:</label>
         <div class="controls">

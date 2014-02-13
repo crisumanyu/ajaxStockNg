@@ -16,16 +16,16 @@
 
 
         <div class="control-group">
-            <label class="control-label" for="id_cliente">Cliente: </label> 
+            <label class="control-label" for="id_Usuario">Usuario: </label> 
             <div class="controls">           
-                <input readonly="true" id="id_cliente" class="input-mini"
-                       name="id_cliente" type="text" size="5" maxlength="5" />  
-                <a class="btn btn-mini" id="id_cliente_button" href="#"><i class="icon-search"></i></a>
+                <input readonly="true" id="id_Usuario" class="input-mini"
+                       name="id_Usuario" type="text" size="5" maxlength="5" />  
+                <a class="btn btn-mini" id="id_Usuario_button" href="#"><i class="icon-search"></i></a>
             </div>
         </div>
         <div class="control-group">
             <div class="controls">
-                <span id="id_cliente_desc" class="alert alert-success"></span>                                       
+                <span id="id_Usuario_desc" class="alert alert-success"></span>                                       
             </div>
         </div> 
 

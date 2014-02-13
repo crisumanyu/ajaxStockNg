@@ -4,14 +4,14 @@
     Author     : rafa
 --%>
 <%@page import="net.rafaelaznar.helper.Conexion"%>
-<%@page import="net.rafaelaznar.dao.ClienteDao"%>
+<%@page import="net.rafaelaznar.dao.UsuarioDao"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Iterator"%>
 <%
-    ClienteDao oClienteDao = new ClienteDao();
-    ArrayList<String> alColumnsNames = (ArrayList<String>) oClienteDao.getColumnsNames();
+    UsuarioDao oUsuarioDao = new UsuarioDao();
+    ArrayList<String> alColumnsNames = (ArrayList<String>) oUsuarioDao.getColumnsNames();
     Iterator<String> oIterador = alColumnsNames.listIterator();
-    String strNombreMantenimiento = "cliente";
+    String strNombreMantenimiento = "Usuario";
 %>
 <div id="<%=strNombreMantenimiento%>_list">
     <div class="span12">

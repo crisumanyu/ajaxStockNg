@@ -16,7 +16,7 @@ moduloProducto.controller('controlProductosList', function($scope, $routeParams,
         $scope.pages = datos5['data'];
         if (parseInt($scope.numPagina) > parseInt($scope.pages))
             $scope.numPagina = $scope.pages;
-            //$location.path( "#/clientes/" +$scope.pages + "/" + $scope.pages);
+            //$location.path( "#/usuarios/" +$scope.pages + "/" + $scope.pages);
     });
 
     $scope.$watch('pages', function() {
@@ -49,8 +49,8 @@ moduloProducto.controller('controlProductosList', function($scope, $routeParams,
 
     $scope.$on('myApp.construirPagina', function() {
 
-        $scope.clientes = serverService.getPage('producto', $scope.numPagina, null, null, $scope.nrpp, null, null, null, null, null, null).then(function(datos3) {
-            $scope.clientes = datos3['list'];
+        $scope.usuarios = serverService.getPage('producto', $scope.numPagina, null, null, $scope.nrpp, null, null, null, null, null, null).then(function(datos3) {
+            $scope.usuarios = datos3['list'];
 
         });
 

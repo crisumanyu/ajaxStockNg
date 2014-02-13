@@ -47,7 +47,7 @@
                 
                 <div class="span12">  
                     <ul class="menu">
-                        <li><a href="#clientes/1/10">clientes</a></li>
+                        <li><a href="#usuarios/1/10">Usuarios</a></li>
                         <li><a href="#productos/1/10">productos</a></li>
                         <li><a href="#view2">view2</a></li>
                     </ul> 
@@ -75,7 +75,7 @@
         <script src="js/app.js"></script>
         <script src="js/services.js"></script>
         
-        <script src="js/clienteControllers.js"></script>
+        <script src="js/UsuarioControllers.js"></script>
         <script src="js/productoControllers.js"></script>
         
         <script src="js/filters.js"></script>
@@ -98,7 +98,7 @@
         <script src="<%=request.getContextPath()%>/js/util.js" charset="UTF-8"></script>
         <script src="<%=request.getContextPath()%>/js/main.js" charset="UTF-8"></script>
 
-        <script src="<%=request.getContextPath()%>/js/control/cliente.js" charset="UTF-8"></script>
+        <script src="<%=request.getContextPath()%>/js/control/Usuario.js" charset="UTF-8"></script>
         <script src="<%=request.getContextPath()%>/js/control/producto.js" charset="UTF-8"></script>
         <script src="<%=request.getContextPath()%>/js/control/tipoproducto.js" charset="UTF-8"></script>
         <script src="<%=request.getContextPath()%>/js/control/compra.js" charset="UTF-8"></script>

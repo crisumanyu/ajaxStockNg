@@ -99,7 +99,7 @@ function procesaAjax(direccion, funcion) {
         },
         error: function(dato) {
             $("#data").empty();
-            $("#data").append("ERROR en la recepción de datos de clientes");
+            $("#data").append("ERROR en la recepción de datos de usuarios");
         }
     });
 }

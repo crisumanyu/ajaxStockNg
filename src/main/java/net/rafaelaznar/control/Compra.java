@@ -97,7 +97,7 @@ public class Compra {
     @RequestMapping({"/compra/getprettycolumns.json"})
     public ModelAndView getPrettyColumns() throws UnsupportedEncodingException, ServletException {
         try {
-            String data = "{\"data\": [\"id\", \"cliente\", \"producto\", \"cantidad\", \"fecha\", \"factura\"]}";
+            String data = "{\"data\": [\"id\", \"Usuario\", \"producto\", \"cantidad\", \"fecha\", \"factura\"]}";
             return new ModelAndView("messageAjax", "contenido", data);
         } catch (Exception e) {
             throw new ServletException("CompraGetpagesJson: View Error: " + e.getMessage());

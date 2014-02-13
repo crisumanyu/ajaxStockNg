@@ -15,6 +15,15 @@ public class UsuarioBean {
     private String email;
     private String login;
     private String password;
+    private Integer id_tipo;
+
+    public Integer getId_tipo() {
+        return id_tipo;
+    }
+
+    public void setId_tipo(Integer id_tipo) {
+        this.id_tipo = id_tipo;
+    }
 
     public UsuarioBean() {
 

@@ -2,10 +2,10 @@
 
 <div class="row-fluid">
     <div class="span7">       
-        <h2>Clientes</h2>
+        <h2>usuarios</h2>
         <div id="order"></div>
         <div id="filter"></div>  
-        <div id="registers">Mostrando {{clientes.length}} registros ({{nrpp}} por página)</div>
+        <div id="registers">Mostrando {{usuarios.length}} registros ({{nrpp}} por página)</div>
         <div id="pagination" ng-bind-html="botoneraPaginas"></div>
         
     </div>
@@ -52,7 +52,7 @@
             </form> 
             -->
         </div> 
-        <button class="btn" id="crear">Crear Cliente</button>
+        <button class="btn" id="crear">Crear Usuario</button>
     </div>
 </div>
 <br>
@@ -64,7 +64,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="cli in clientes">
+            <tr ng-repeat="cli in usuarios">
                 <td>{{cli.id}}</td>
                 <td>{{cli.nombre}}</td>
                 <td>{{cli.ape1}}</td>
@@ -73,9 +73,9 @@
                 <td>
                     <div class="btn-toolbar">
                         <div class="btn-group">
-                            <a class="btn btn-mini action02" href="#/cliente/view/{{cli.id}}"><i class="icon-zoom-in"></i></a>
-                            <a class="btn btn-mini action03" href="#/cliente/edit/{{cli.id}}"><i class="icon-pencil"></i></a>
-                            <a class="btn btn-mini action04" href="#/cliente/delete/{{cli.id}}"><i class="icon-remove"></i></a>
+                            <a class="btn btn-mini action02" href="#/Usuario/view/{{cli.id}}"><i class="icon-zoom-in"></i></a>
+                            <a class="btn btn-mini action03" href="#/Usuario/edit/{{cli.id}}"><i class="icon-pencil"></i></a>
+                            <a class="btn btn-mini action04" href="#/Usuario/delete/{{cli.id}}"><i class="icon-remove"></i></a>
                         </div> 
                     </div>
 

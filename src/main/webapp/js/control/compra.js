@@ -72,17 +72,17 @@ var control_compra_list = function(path) {
             $(prefijo_div + '#codigo').focus();
         }
 
-        //clave ajena cliente
-        cargaClaveAjena('#id_cliente', '#id_cliente_desc', 'cliente')
+        //clave ajena Usuario
+        cargaClaveAjena('#id_Usuario', '#id_Usuario_desc', 'Usuario')
 
-        $(prefijo_div + '#id_cliente_button').unbind('click');
-        $(prefijo_div + '#id_cliente_button').click(function() {
-            loadForeign('cliente', '#modal02', control_cliente_list, callbackSearchCliente);
-            function callbackSearchCliente(id) {
+        $(prefijo_div + '#id_Usuario_button').unbind('click');
+        $(prefijo_div + '#id_Usuario_button').click(function() {
+            loadForeign('Usuario', '#modal02', control_Usuario_list, callbackSearchUsuario);
+            function callbackSearchUsuario(id) {
                 $(prefijo_div + '#modal02').modal('hide');
                 $(prefijo_div + '#modal02').data('modal', null);
-                $(prefijo_div + '#id_cliente').val($(this).attr('id'));
-                cargaClaveAjena('#id_cliente', '#id_cliente_desc', 'cliente');
+                $(prefijo_div + '#id_Usuario').val($(this).attr('id'));
+                cargaClaveAjena('#id_Usuario', '#id_Usuario_desc', 'Usuario');
                 return false;
             }
             return false;

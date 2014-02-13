@@ -116,7 +116,7 @@ angular.module('myApp.services', [])
                     else
                         vector += "<li> ";
                     vector += "<a class=\"nrpp\" id=\"nrrp100\" href=\"" + link + page_number + "/100" + "\">100</a></li>";
-                    // http://localhost:8081/AjaxStockUniDaoSpring/index.jsp#/cliente/4/nrpp
+                    // http://localhost:8081/AjaxStockUniDaoSpring/index.jsp#/Usuario/4/nrpp
                     vector += "</ul></div>";
                     return vector;
                 }

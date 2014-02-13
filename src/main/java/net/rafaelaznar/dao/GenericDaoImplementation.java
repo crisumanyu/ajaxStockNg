@@ -67,7 +67,7 @@ public class GenericDaoImplementation<TIPO_OBJETO> implements GenericDao<TIPO_OB
         Class<TIPO_OBJETO> tipo = (Class<TIPO_OBJETO>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
         Method metodo_setId = tipo.getMethod("setId", Integer.class);
         ArrayList<Integer> arrId;
-        ArrayList<TIPO_OBJETO> arrCliente = new ArrayList<>();
+        ArrayList<TIPO_OBJETO> arrUsuario = new ArrayList<>();
         try {
             //oMysql.conexion(enumTipoConexion);
             arrId = oMysql.getPage(strTabla, intRegsPerPag, intPage, hmFilter, hmOrder);
@@ -76,9 +76,9 @@ public class GenericDaoImplementation<TIPO_OBJETO> implements GenericDao<TIPO_OB
             while (iterador.hasNext()) {
                 Object oBean = Class.forName(tipo.getName()).newInstance();
                 metodo_setId.invoke(oBean, iterador.next());
-                arrCliente.add(this.get((TIPO_OBJETO) oBean));
+                arrUsuario.add(this.get((TIPO_OBJETO) oBean));
             }
-            return arrCliente;
+            return arrUsuario;
         } catch (Exception e) {
             throw new Exception("GenericDao.getPage: Error: " + e.getMessage());
         }

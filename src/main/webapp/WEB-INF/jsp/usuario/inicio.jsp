@@ -42,8 +42,8 @@
             <li>Estructura de servidor MVC por niveles sin frameworks</li> 
             <li>Servidor escrito en Java (servlets y jsp)</li>  
             <li>Dos controladores, uno para servir jsp y otro para servir json</li>  
-            <li>Cliente AJAX con Javascript y JQuery</li>              
-            <li>Cliente desarrollado sobre Bootstrap responsivo</li>
+            <li>Usuario AJAX con Javascript y JQuery</li>              
+            <li>Usuario desarrollado sobre Bootstrap responsivo</li>
             <li>Acceso a datos (base de datos MySQL) mediante clases de negocio y DAO</li>
             <li>UNI-DAO tiene la característica especial de que tiene una clase DAO genérica mediante el uso de Reflection</li>
             <li>Spring se utiliza para proporcionar soporte a las URL REST (híbrido) y para conocer el concepto de inyección de dependencias</li>

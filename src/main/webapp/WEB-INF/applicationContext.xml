@@ -15,7 +15,7 @@
         <context:component-scan base-package="net.rafaelaznar" />
                
         <bean class="net.rafaelaznar.conexion.DriverManagerConnection" />
-        <bean class="net.rafaelaznar.dao.ClienteDao" />
+        <bean class="net.rafaelaznar.dao.UsuarioDao" />
         <bean class="net.rafaelaznar.dao.CompraDao" />
         <bean class="net.rafaelaznar.dao.ProductoDao" />
         <bean class="net.rafaelaznar.dao.TipoproductoDao" />

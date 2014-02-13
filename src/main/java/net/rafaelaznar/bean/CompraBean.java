@@ -5,7 +5,7 @@ import java.util.Date;
 public class CompraBean {
 
     private Integer id = 0;
-    private Integer id_cliente = 0;
+    private Integer id_Usuario = 0;
     private Integer id_producto = 0;
     private Integer cantidad = 0;
     private Date fecha = new Date();
@@ -27,12 +27,12 @@ public class CompraBean {
         this.id = id;
     }
 
-    public Integer getId_cliente() {
-        return id_cliente;
+    public Integer getId_Usuario() {
+        return id_Usuario;
     }
 
-    public void setId_cliente(Integer id_cliente) {
-        this.id_cliente = id_cliente;
+    public void setId_Usuario(Integer id_Usuario) {
+        this.id_Usuario = id_Usuario;
     }
 
     public Integer getId_producto() {

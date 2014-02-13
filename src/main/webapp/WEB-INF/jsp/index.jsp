@@ -55,7 +55,7 @@
 </head>
 <body>
   <ul class="menu">
-    <li><a href="#cliente/1">cliente</a></li>
+    <li><a href="#Usuario/1">Usuario</a></li>
     <li><a href="#view2">view2</a></li>
   </ul>     
 

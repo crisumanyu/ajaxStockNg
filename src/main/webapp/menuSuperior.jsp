@@ -9,7 +9,7 @@
     <div class="nav-collapse collapse">
         <ul class="nav">
             <li><a href="jsp">Inicio</a></li>
-            <li><a href="jsp?ob=cliente&op=list">Cliente</a></li>
+            <li><a href="jsp?ob=Usuario&op=list">Usuario</a></li>
             <li><a href="jsp?ob=producto&op=list">Producto</a></li>           
         </ul>
     </div>

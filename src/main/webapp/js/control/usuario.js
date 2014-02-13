@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 
-var control_cliente_list = function(path) {
+var control_Usuario_list = function(path) {
     //contexto privado
 
-    var prefijo_div = "#cliente_list ";
+    var prefijo_div = "#Usuario_list ";
 
     function cargaBotoneraMantenimiento() {
         var botonera = [
@@ -90,7 +90,7 @@ var control_cliente_list = function(path) {
         $('#indexContenido').empty().append(compraView.getEmptyList());
 
         var compraControl = control_compra_list(path);
-        compraControl.inicia(compraView, 1, null, null, 10, null, null, null, null, "id_cliente", "equals", id);
+        compraControl.inicia(compraView, 1, null, null, 10, null, null, null, null, "id_Usuario", "equals", id);
         return false;
 
     }
